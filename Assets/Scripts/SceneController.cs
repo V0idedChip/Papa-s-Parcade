@@ -109,12 +109,4 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("Memory Game");
     }
-
-    private IEnumerator CheckMatch()
-    {
-        if (_score == 3)
-        {
-
-        }
-    }
 }
