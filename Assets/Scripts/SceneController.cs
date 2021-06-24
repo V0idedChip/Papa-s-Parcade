@@ -87,12 +87,13 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator CheckMatch()
     {
-        if (_firstRevealed.id == _secondRevealed.id)
+        if (_firstRevealed.id != _secondRevealed.id)
         {
-           
-        }
-        else
-        {
+            _score++;
+            scoreLabel.text = "Mistakes: " + _score;
+        
+       
+        
             yield return new WaitForSeconds(0.5f);
 
             _firstRevealed.Unreveal();
@@ -109,4 +110,11 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Memory Game");
     }
 
+    private IEnumerator CheckMatch()
+    {
+        if (_score == 3)
+        {
+
+        }
+    }
 }
