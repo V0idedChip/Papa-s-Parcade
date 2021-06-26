@@ -502,6 +502,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card_Back
       objectReference: {fileID: 0}
+    - target: {fileID: 3237897953935811654, guid: 168798dca34e70643a18d021feba1843,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ad5354c682dd4ec4693bb81903db8323,
+        type: 3}
+    - target: {fileID: 3237897953935811654, guid: 168798dca34e70643a18d021feba1843,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237897953935811654, guid: 168798dca34e70643a18d021feba1843,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3237897953935811654, guid: 168798dca34e70643a18d021feba1843,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6028200749797040052, guid: 168798dca34e70643a18d021feba1843,
         type: 3}
       propertyPath: m_RootOrder
@@ -510,12 +531,17 @@ PrefabInstance:
     - target: {fileID: 6028200749797040052, guid: 168798dca34e70643a18d021feba1843,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.6886444
+      value: 1.5332805
       objectReference: {fileID: 0}
     - target: {fileID: 6028200749797040052, guid: 168798dca34e70643a18d021feba1843,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.640423
+      value: 1.2220018
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028200749797040052, guid: 168798dca34e70643a18d021feba1843,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.32702
       objectReference: {fileID: 0}
     - target: {fileID: 6028200749797040052, guid: 168798dca34e70643a18d021feba1843,
         type: 3}
@@ -1067,7 +1093,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.61, y: 5.42}
+    oldSize: {x: 2.7, y: 4.08}
     newSize: {x: 4.61, y: 5.42}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1117,7 +1143,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f354183d39d457b4883afd7e6de1a610, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b281a789f16f1343979850c30523158, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1137,7 +1163,7 @@ Transform:
   m_GameObject: {fileID: 2098492763}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.17, y: -3.7344, z: 0}
-  m_LocalScale: {x: 0.24539094, y: 0.29711452, z: 1}
+  m_LocalScale: {x: 0.36173078, y: 0.4379765, z: 1.4741}
   m_Children:
   - {fileID: 1583194391}
   m_Father: {fileID: 0}
@@ -1174,10 +1200,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originalCard: {fileID: 2098492764}
   images:
-  - {fileID: 21300000, guid: f354183d39d457b4883afd7e6de1a610, type: 3}
-  - {fileID: 21300000, guid: 18e655a21f49cb34fa70e0ac40ebf269, type: 3}
-  - {fileID: 21300000, guid: 0e20ee2cdd0e04042ba6aff594373a0e, type: 3}
-  - {fileID: 21300000, guid: 7c7d857bca47f81409522973fe221436, type: 3}
+  - {fileID: 21300000, guid: 4ab17a19900aaab41a5b1129682759e7, type: 3}
+  - {fileID: 21300000, guid: 9b281a789f16f1343979850c30523158, type: 3}
+  - {fileID: 21300000, guid: 53b7fcc5e7060c441a52e673268622bf, type: 3}
+  - {fileID: 21300000, guid: ad0920cd1edbbad43ad21e99dc5ef219, type: 3}
   scoreLabel: {fileID: 962018102}
 --- !u!4 &2105683219
 Transform:
