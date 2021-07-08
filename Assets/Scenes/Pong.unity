@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!208 &149721097
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &164963909
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 2113161186383203101, guid: 73aa518f6778eac4aa448c535bb1c2e2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2119187413323417748, guid: 73aa518f6778eac4aa448c535bb1c2e2,
         type: 3}
@@ -365,7 +365,7 @@ PrefabInstance:
     - target: {fileID: 2119187413323417748, guid: 73aa518f6778eac4aa448c535bb1c2e2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2119187413323417752, guid: 73aa518f6778eac4aa448c535bb1c2e2,
         type: 3}
@@ -472,10 +472,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8169860625695622798, guid: 73aa518f6778eac4aa448c535bb1c2e2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 977.6238
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169860625695622798, guid: 73aa518f6778eac4aa448c535bb1c2e2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 584.8022
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169860625695622798, guid: 73aa518f6778eac4aa448c535bb1c2e2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0665
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169860625695622798, guid: 73aa518f6778eac4aa448c535bb1c2e2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.7031
+      objectReference: {fileID: 0}
     - target: {fileID: 9142415263872808398, guid: 73aa518f6778eac4aa448c535bb1c2e2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73aa518f6778eac4aa448c535bb1c2e2, type: 3}
@@ -498,7 +518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1078164870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -644,7 +664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1143081954
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -852,7 +872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1565844148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -935,7 +955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1818415396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -992,7 +1012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1986335098
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1052,7 +1072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2014923992
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1195,7 +1215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &2057091229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1308,6 +1328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'Game Over '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336434516690297832, guid: 754c137a44feedb41b15fc66af5277af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4336434516690297836, guid: 754c137a44feedb41b15fc66af5277af,
         type: 3}
