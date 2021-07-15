@@ -19,7 +19,7 @@ public class DestroyScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(GameObject);
+            Destroy(gameObject);
         }
     }
 }
