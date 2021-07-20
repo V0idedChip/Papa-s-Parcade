@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CarScript : MonoBehaviour
 {
     public float speed;
+    public int health;
     public Animator animator;
 
     private Rigidbody2D rb;
@@ -25,7 +26,10 @@ public class CarScript : MonoBehaviour
         animator.SetFloat("Horizontal", moveVelocity.x);
         animator.SetFloat("Vertical", moveVelocity.y);
         animator.SetFloat("Speed", moveVelocity.sqrMagnitude);
+        animator.SetTrigger("health");
     }
+
+   
 
     void FixedUpdate()
     {
@@ -39,8 +43,9 @@ public class CarScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Death")
         {
-            
+            animator.Play("BOOM");
             Destroy(gameObject,0.6f);
+            Time.timeScale = 0.6f;
         }
     }
 
