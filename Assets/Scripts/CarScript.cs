@@ -39,7 +39,7 @@ public class CarScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        Debug.Log("Hit");
 
         if (collision.gameObject.tag == "Death")
         {
