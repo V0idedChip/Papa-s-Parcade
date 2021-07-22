@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkpoints : MonoBehaviour
+public class CheckpointManager : MonoBehaviour
 {
     public Checkpoint[] checkpoints;
     public int checkpointno = 0;
@@ -12,7 +12,7 @@ public class Checkpoints : MonoBehaviour
     void Start()
     {
         currentCheckpoint = checkpoints[checkpointno];
-
+        
     }
     // Update is called once per frame
     void Update()
@@ -24,6 +24,8 @@ public class Checkpoints : MonoBehaviour
             if (checkpointno >= checkpoints.Length)
             {
                 checkpointno = 0;
+
+                
             }
             currentCheckpoint = checkpoints[checkpointno];
         }
