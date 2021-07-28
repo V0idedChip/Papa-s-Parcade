@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Memory Game/Memory Game.unity
+    guid: c343966b4ed31594dbabca5c06baa48f
+  - enabled: 1
+    path: Assets/Scenes/Pipe Game/Pipe Game.unity
+    guid: fbf057401bd5bc84781214c464a9e76a
+  - enabled: 1
+    path: Assets/Scenes/Pong.unity
+    guid: b18fd9e50ae0c974b8970268d5c74214
   m_configObjects: {}
