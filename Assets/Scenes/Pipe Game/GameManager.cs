@@ -4,42 +4,30 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject PipesHolder;
-    public GameObject[] Pipes;
+    public PipeScript[] Pipes;
 
-    [SerializeField]
-    int totalPipes = 0;
-    [SerializeField]
-    int correctedPipes = 0;
-
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// CheckIfComplete goes through the list of pipes and counts up how many are incorrect. If none are incorrect, then the game ends.
+    /// </summary>
+    public void CheckIfComplete()
     {
-        totalPipes = PipesHolder.transform.childCount;
+        int incorrect = 0;
 
-        Pipes = new GameObject[totalPipes];
-
-        
-        for (int i =0; i < Pipes.Length; i++)
+        foreach(PipeScript pipe in Pipes)
         {
-            Pipes[i] = PipesHolder.transform.GetChild(i).gameObject;
+            if (!pipe.isPlaced)
+            {
+                incorrect++;
+            }
         }
-    }
 
-    public void correctMove()
-    {
-        correctedPipes += 1;
-
-        Debug.Log("Move");
-
-        if(correctedPipes == totalPipes)
+        if(incorrect > 0)
         {
-            Debug.Log("You Win");
+            Debug.Log("There are " + incorrect + " pipes needing to be repaired.");
         }
-    }
-
-    public void wrongMove()
-    {
-        correctedPipes -= 1;
+        else
+        {
+            Debug.Log("You won!");
+        }        
     }
 }
