@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class TheGameManager : MonoBehaviour
 {
     public static TheGameManager instance = null;
-    
+    public GameObject win;
+    public GameObject lose;
+    public bool activate;
+    public float resetdelay;
     void Awake()
     {
         if (instance == null)
@@ -17,14 +20,22 @@ public class TheGameManager : MonoBehaviour
     
     public void Win()
     {
+        Time.timeScale = .5f;
         
-        LoadRandomScene();
+        
+         win.SetActive(true);
+        
+       
+        Invoke("Continue", resetdelay);
     }
 
     public void Lose()
     {
-        
-        LoadRandomScene();
+        Time.timeScale = .5f;
+       
+            lose.SetActive(true);
+       
+        Invoke("Continue", resetdelay);
     }
 
     public void LoadRandomScene()
@@ -32,5 +43,13 @@ public class TheGameManager : MonoBehaviour
         int index = Random.Range(1, 5);
         SceneManager.LoadScene(index);
         Debug.Log("Scene Loaded");
+    }
+
+    void Continue()
+    {
+        Time.timeScale = 1.0f;
+        LoadRandomScene();
+
+
     }
 }
