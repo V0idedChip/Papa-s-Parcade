@@ -8,6 +8,8 @@ public class CheckpointManager : MonoBehaviour
     public int checkpointno = 0;
     private Checkpoint currentCheckpoint;    
     private Finish fin;
+    public int laps;
+    private int curlaps=0;
 
     void Start()
     {
@@ -24,14 +26,32 @@ public class CheckpointManager : MonoBehaviour
             if (checkpointno >= checkpoints.Length)
             {
                 checkpointno = 0;
+                curlaps++;
+                if (LapCheck())
+                {
+                    //game end 
+                    Debug.Log("Fin");
+                    TheGameManager.instance.Win();
+                }
+                
 
+                
                 
             }
             currentCheckpoint = checkpoints[checkpointno];
         }
     }
 
-   
+   private bool LapCheck()
+    {
+        if (curlaps >= laps)
+        {
+            return true;
+
+        }
+        return false;
+
+    }
 
     
 }

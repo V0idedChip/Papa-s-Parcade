@@ -17,6 +17,13 @@ public class TheGameManager : MonoBehaviour
     
     public void Win()
     {
+        
+        LoadRandomScene();
+    }
+
+    public void Lose()
+    {
+        
         LoadRandomScene();
     }
 
