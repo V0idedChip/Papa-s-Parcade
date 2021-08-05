@@ -5,19 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class TheGameManager : MonoBehaviour
 {
-   void Awake()
+    public static TheGameManager instance = null;
+    
+    void Awake()
     {
         if (instance == null)
             instance = this;
         else if (instance != null)
-            destroy(gameObject);
+            Destroy (gameObject);
     }
     
-
+    public void Win()
+    {
+        LoadRandomScene();
+    }
 
     public void LoadRandomScene()
     {
-        int index = Random.Range(1, 3);
+        int index = Random.Range(1, 5);
         SceneManager.LoadScene(index);
         Debug.Log("Scene Loaded");
     }
