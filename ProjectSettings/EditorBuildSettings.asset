@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Main Menu Scene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
     path: Assets/Scenes/Memory Game/Memory Game.unity
     guid: c343966b4ed31594dbabca5c06baa48f
   - enabled: 1
@@ -17,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pong.unity
     guid: b18fd9e50ae0c974b8970268d5c74214
+  - enabled: 1
+    path: Assets/Scenes/Race Game.unity
+    guid: 50919f86ca1d24746ba514b1e11f9b53
+  - enabled: 1
+    path: Assets/Scenes/Spook Game/Spook.unity
+    guid: 71a9dd98de9fe9e4786332d462c7e566
   m_configObjects: {}
