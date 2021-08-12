@@ -16,7 +16,10 @@ public class mainmenu : MonoBehaviour
 
    
 
-
+    public void TestButton(string buttonName)
+    {
+        Debug.Log("TEST BUTTON " + buttonName);
+    }
 
 
     public void QuitGame() // this just prints in the inspector QUIT 
