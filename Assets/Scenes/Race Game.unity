@@ -902,10 +902,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoints:
-  - {fileID: 3435850483795581868}
   - {fileID: 1510538889}
-  - {fileID: 1218296018}
+  - {fileID: 3435850483795581868}
   - {fileID: 991837407}
+  - {fileID: 1218296018}
   checkpointno: 0
   laps: 1
 --- !u!4 &600028602
