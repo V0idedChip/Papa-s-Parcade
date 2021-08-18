@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 14926659}
   - component: {fileID: 14926658}
   - component: {fileID: 14926660}
+  - component: {fileID: 14926661}
   - component: {fileID: 14926655}
   m_Layer: 0
   m_Name: 'Lario '
@@ -157,9 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5681712eca42afd4da5d7cf9d0b6ee25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  health: 1
-  animator: {fileID: 14926660}
 --- !u!212 &14926656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -269,7 +267,7 @@ Rigidbody2D:
   m_Mass: 0.1146862
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 54
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -294,6 +292,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &14926661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14926654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a917a32a9f7ac4a4da7612d626d1fd80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementSpeed: 5
 --- !u!1 &166094486
 GameObject:
   m_ObjectHideFlags: 0
