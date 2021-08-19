@@ -1211,15 +1211,15 @@ RectTransform:
   m_GameObject: {fileID: 2068887006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89426357, y: 0.5300099, z: 4.8186}
+  m_LocalScale: {x: 0.24874836, y: 0.14742756, z: 1.3403418}
   m_Children: []
   m_Father: {fileID: 1678455033}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1028.5, y: 256.9}
-  m_SizeDelta: {x: -359.7799, y: -277.6939}
+  m_AnchoredPosition: {x: 168.5, y: 129}
+  m_SizeDelta: {x: 289.7365, y: -154.7649}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068887008
 MonoBehaviour:
@@ -1268,7 +1268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: timer
 --- !u!222 &2068887010
 CanvasRenderer:
   m_ObjectHideFlags: 0
