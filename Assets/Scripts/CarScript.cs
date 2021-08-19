@@ -46,6 +46,7 @@ public class CarScript : MonoBehaviour
             animator.Play("BOOM");
             Destroy(gameObject,0.6f);
             Time.timeScale = 0.6f;
+            TheGameManager.instance.Lose();
         }
     }
 

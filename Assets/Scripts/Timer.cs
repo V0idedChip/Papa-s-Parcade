@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
 {
     public int countDownStartValue;
     public Text timerUI;
+    public float resetdelay;
 
     void Start()
     {
@@ -25,9 +26,18 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            timerUI.text = "GameOver!";
+            timerUI.text = "WIN!";
+
+            TheGameManager.instance.Win();
+            Invoke("reset", resetdelay);
         }
     }
-    void Update() { }
+    
+
+    void reset()
+    {
+        Time.timeScale = 1.0f;
+        TheGameManager.instance.Win();
+    }
 }
 

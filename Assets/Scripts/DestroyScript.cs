@@ -20,6 +20,8 @@ public class DestroyScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+
+            TheGameManager.instance.Lose();
         }
     }
 }
