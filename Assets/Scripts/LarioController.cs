@@ -4,24 +4,64 @@ using UnityEngine;
 
 public class LarioController : MonoBehaviour
 {
-    private PLayerControlerScript pLayer;
+    float xInput, yInput;
     private Rigidbody2D rb;
-
+    public Animator animator;
+    public float jumpVelocity = 1000f;
+    private Vector2 moveVelocity;
+    public float speed;
+    
     private void Awake()
     {
-        pLayer = gameObject.GetComponent<PLayerControlerScript>();
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
-    private void Update()
+     
+    private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        xInput = Input.GetAxis("Horizontal");
+        yInput = Input.GetAxis("Vertical");
+
+        transform.Translate(xInput * speed, yInput * speed, 0);
+        PlatformerMove();
+        
+    }
+    void Update()
+    {
+        
+       
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            float jumpVelocity = 1000f;
-            rb.velocity = Vector2.up * jumpVelocity;
+
+            Jump(); 
+            
         }
+
+
+        animator.SetFloat("Horizontal", moveVelocity.x);
+        animator.SetFloat("Vertical", moveVelocity.y);
+        animator.SetFloat("Speed", moveVelocity.sqrMagnitude);
+
+
     }
 
+  
+    void Jump()
+    {
+        rb.AddForce(Vector2.up * jumpVelocity);
+        Debug.Log("KEY Pressed");
+    }
+
+   void PlatformerMove()
+    {
+        rb.velocity = new Vector2(speed * xInput, rb.velocity.y);
+    }
+
+
+
+    //https://forum.unity.com/threads/mario-style-jumping.381906/
 
 
 }

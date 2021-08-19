@@ -9,7 +9,7 @@ public class TheGameManager : MonoBehaviour
     public GameObject win;
     public GameObject lose;
     public bool activate;
-    public float resetdelay;
+    public float resetdelay = 1f;
     void Awake()
     {
         if (instance == null)
