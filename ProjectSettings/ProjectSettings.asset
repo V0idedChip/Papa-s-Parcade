@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Pap.s ui
-  defaultCursor: {fileID: 2800000, guid: 5e446bf1ccad1c647aa920d9dd30bc37, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 410d981fc919be4489c2981eb5520c25, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
