@@ -101,6 +101,7 @@ public class SceneController : MonoBehaviour {
 
         _firstRevealed = null;
         _secondRevealed = null;
+        TheGameManager.instance.Win();
 
     }
 

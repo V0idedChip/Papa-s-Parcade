@@ -19,13 +19,14 @@ public class TimerGameOverLogic : MonoBehaviour
         if (countDownStartValue > 0)
         {
             TimeSpan spanTime = TimeSpan.FromSeconds(countDownStartValue);
-            timerUI.text = "Timer " + spanTime.Minutes + " " + spanTime.Seconds;
+            timerUI.text = "Timer " + spanTime.Seconds;
             countDownStartValue--;
             Invoke("countDownTimer", 1.0f);
         }
         else
         {
             timerUI.text = "GameOver!";
+            TheGameManager.instance.Lose();
         }
     }
     void Update() { }
