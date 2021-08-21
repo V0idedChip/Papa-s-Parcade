@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour {
+public class SceneController : MonoBehaviour
+{
 
     public const int gridRows = 2;
     public const int gridCols = 4;
@@ -17,15 +18,15 @@ public class SceneController : MonoBehaviour {
     {
         Vector3 startPos = originalCard.transform.position; //The position of the first card. All other cards are offset from here.
 
-        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3};
+        int[] numbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
         numbers = ShuffleArray(numbers); //This is a function we will create in a minute!
 
-        for(int i = 0; i < gridCols; i++)
+        for (int i = 0; i < gridCols; i++)
         {
-            for(int j = 0; j < gridRows; j++)
+            for (int j = 0; j < gridRows; j++)
             {
                 MainCard card;
-                if(i == 0 && j == 0)
+                if (i == 0 && j == 0)
                 {
                     card = originalCard;
                 }
@@ -48,7 +49,7 @@ public class SceneController : MonoBehaviour {
     private int[] ShuffleArray(int[] numbers)
     {
         int[] newArray = numbers.Clone() as int[];
-        for(int i = 0; i < newArray.Length; i++)
+        for (int i = 0; i < newArray.Length; i++)
         {
             int tmp = newArray[i];
             int r = Random.Range(i, newArray.Length);
@@ -60,11 +61,10 @@ public class SceneController : MonoBehaviour {
 
     //-------------------------------------------------------------------------------------------------------------------------------------------
 
-     private MainCard _firstRevealed;
+    private MainCard _firstRevealed;
     private MainCard _secondRevealed;
 
-    private int _score = 0;
-    [SerializeField] private TextMesh scoreLabel;
+   
 
     public bool canReveal
     {
@@ -81,6 +81,7 @@ public class SceneController : MonoBehaviour {
         {
             _secondRevealed = card;
             StartCoroutine(CheckMatch());
+           
         }
     }
 
@@ -88,8 +89,7 @@ public class SceneController : MonoBehaviour {
     {
         if (_firstRevealed.id != _secondRevealed.id)
         {
-            _score++;
-            scoreLabel.text = "Mistakes: " + _score;
+           
         
        
         
@@ -101,7 +101,6 @@ public class SceneController : MonoBehaviour {
 
         _firstRevealed = null;
         _secondRevealed = null;
-        TheGameManager.instance.Win();
 
     }
 
@@ -110,3 +109,4 @@ public class SceneController : MonoBehaviour {
         SceneManager.LoadScene("Memory Game");
     }
 }
+
