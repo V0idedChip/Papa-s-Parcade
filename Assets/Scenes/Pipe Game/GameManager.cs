@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("You won!");
             TheGameManager.instance.Win();
         }        
     }
