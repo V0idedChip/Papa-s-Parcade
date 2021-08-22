@@ -43,7 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65a9df35c8a48e4085a88199df71154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  win: {fileID: 6576637421734481870, guid: 11a1c4a8d7937f142bc301ff5b22a0f0, type: 3}
-  lose: {fileID: 9067162373885594246, guid: 3ca9babcab3801c4094e423e6c1b5fbd, type: 3}
+  win: {fileID: 0}
+  lose: {fileID: 0}
   activate: 0
   resetdelay: 0
+  transition: {fileID: 0}
+  transitionTime: 1

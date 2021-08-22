@@ -10,6 +10,8 @@ public class TheGameManager : MonoBehaviour
     public GameObject lose;
     public bool activate;
     public float resetdelay = 1f;
+    public Animator transition;
+    public float transitionTime = 1f;
     void Awake()
     {
         if (instance == null)
@@ -27,6 +29,8 @@ public class TheGameManager : MonoBehaviour
         
        
         Invoke("Continue", resetdelay);
+
+        
     }
 
     public void Lose()
@@ -51,5 +55,14 @@ public class TheGameManager : MonoBehaviour
         LoadRandomScene();
 
 
+    }
+
+    IEnumerable LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        LoadRandomScene();
     }
 }
