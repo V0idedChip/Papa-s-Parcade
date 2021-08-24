@@ -81,7 +81,7 @@ public class SceneController : MonoBehaviour
         {
             _secondRevealed = card;
             StartCoroutine(CheckMatch());
-           
+           TheGameManager.instance.Win();
         }
     }
 

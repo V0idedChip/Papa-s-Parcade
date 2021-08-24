@@ -13,7 +13,7 @@ public class Light : MonoBehaviour
         curMousePos.z = Camera.main.nearClipPlane;
         curMousePos = Camera.main.ScreenToWorldPoint(curMousePos);
         curMousePos.z = 0;
-        Debug.Log("Mouse pos at " + curMousePos);
+      
         this.transform.position = curMousePos;
     }
 }
