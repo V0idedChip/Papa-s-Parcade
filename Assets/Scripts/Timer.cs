@@ -1,30 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class targetscript : MonoBehaviour
+public class Timer : MonoBehaviour
 {
-    public bool reached = false;
-    // Start is called before the first frame update
+    public int countDownStartValue;
+    public Text timerUI;
+
     void Start()
     {
-
+        countDownTimer();
     }
 
-    // Update is called once per frame
-    void Update()
+    void countDownTimer()
     {
+        if (countDownStartValue > 0)
+        {
+            TimeSpan spanTime = TimeSpan.FromSeconds(countDownStartValue);
+            timerUI.text = "Timer " + spanTime.Seconds;
+            countDownStartValue--;
+            Invoke("countDownTimer", 1.0f);
+        }
+        else
+        {
+            timerUI.text = "win";
 
+            TheGameManager.instance.Win();
+        }
     }
-   public void OnMouseDown()
-
-
-    {
-        Debug.Log("HIT");
-
-
-        reached = true;
-
-
-    }
+    void Update() { }
 }

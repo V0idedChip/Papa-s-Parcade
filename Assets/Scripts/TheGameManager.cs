@@ -51,7 +51,7 @@ public class TheGameManager : MonoBehaviour
 
     public void LoadRandomScene()
     {
-        int index = Random.Range(1, 5);
+        int index = Random.Range(2, 10);
         SceneManager.LoadScene(index);
         Debug.Log("Scene Loaded");
         //PlayerPrefs.GetInt("playerLifes");

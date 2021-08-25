@@ -18,7 +18,7 @@ public class mainmenu : MonoBehaviour
 
     public void LoadRandomScene()
     {
-        int index = Random.Range(1, 5);
+        int index = Random.Range(2, 10);
         SceneManager.LoadScene(index);
         Debug.Log("Scene Loaded");
         //PlayerPrefs.SetInt("playerLifes", playerLifes);
@@ -34,6 +34,11 @@ public class mainmenu : MonoBehaviour
     {
         Debug.Log("QUIT!");
         Application.Quit();
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }
 
