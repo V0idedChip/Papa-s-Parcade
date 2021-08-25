@@ -12,9 +12,14 @@ public class Spriteshit : MonoBehaviour
     { 
         spriteRenderer.sprite = newSprite;
     }
+
+    public AudioClip Powerup14;
+    private AudioSource audioSource;
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        audioSource = gameObject.GetComponent<AudioSource>();
 
     }
 
@@ -24,6 +29,10 @@ public class Spriteshit : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.DownArrow))
         {
             ChangeSprite(newSprite);
+
+            audioSource.clip = Powerup14;
+            Debug.Log("skrrt");
+            audioSource.Play();
         }
     }
 }

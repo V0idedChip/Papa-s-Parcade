@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Spook Game/Spook.unity
     guid: 71a9dd98de9fe9e4786332d462c7e566
+  - enabled: 1
+    path: Assets/Scenes/Arm/Arm Wrasle.unity
+    guid: 4bf70e83a1f3a2c46bea681a8fcc489f
+  - enabled: 1
+    path: Assets/Scenes/Tug of War/Tug of War.unity
+    guid: 9e5f93ca75bddf2449433ef1dc0f8ca6
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 12f77c34245404749bb2e57581318502
   m_configObjects: {}

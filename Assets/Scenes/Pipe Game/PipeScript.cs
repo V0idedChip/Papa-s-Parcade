@@ -17,6 +17,9 @@ public class PipeScript : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
+    public AudioClip Powerup14;
+    private AudioSource audioSource;
+
     private void Start()
     {
         //Rather than tracking the euler angle, we track our location in the rotations list
@@ -25,11 +28,15 @@ public class PipeScript : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, rotations[curRot]);
 
         RotationCheck();
-        
+
+        audioSource = gameObject.GetComponent<AudioSource>();
+
     }
 
     private void OnMouseDown()
     {
+
+
         //Rotate the object, we don't pay attention to its euler angle
         transform.Rotate(new Vector3(0, 0, 90));
         //Increase the current rotation to reference the approprate rotation in the rotations list
@@ -39,7 +46,11 @@ public class PipeScript : MonoBehaviour
         {
             curRot = 0;
         }
-        RotationCheck();            
+        RotationCheck();
+
+        audioSource.clip = Powerup14;
+        Debug.Log("skrrt");
+        audioSource.Play();
     }
 
     //This function returns a boolean
