@@ -13,7 +13,6 @@ public class AIM : MonoBehaviour
         curMousePos.z = Camera.main.nearClipPlane;
         curMousePos = Camera.main.ScreenToWorldPoint(curMousePos);
         curMousePos.z = -8;
-        Debug.Log("Mouse pos at " + curMousePos);
         this.transform.position = curMousePos;
     }
 }

@@ -81,7 +81,7 @@ public class SceneController : MonoBehaviour
         {
             _secondRevealed = card;
             StartCoroutine(CheckMatch());
-           TheGameManager.instance.Win();
+          
         }
     }
 
@@ -101,11 +101,13 @@ public class SceneController : MonoBehaviour
 
         _firstRevealed = null;
         _secondRevealed = null;
+       
 
     }
 
     public void Restart()
     {
+        TheGameManager.instance.Win();
         SceneManager.LoadScene("Memory Game");
     }
 }

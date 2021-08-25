@@ -1,43 +1,30 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Timer : MonoBehaviour
+public class targetscript : MonoBehaviour
 {
-    public int countDownStartValue;
-    public Text timerUI;
-    public float resetdelay;
-
+    public bool reached = false;
+    // Start is called before the first frame update
     void Start()
     {
-        countDownTimer();
+
     }
 
-    void countDownTimer()
+    // Update is called once per frame
+    void Update()
     {
-        if (countDownStartValue > 0)
-        {
-            TimeSpan spanTime = TimeSpan.FromSeconds(countDownStartValue);
-            timerUI.text = "Timer " + spanTime.Minutes + " " + spanTime.Seconds;
-            countDownStartValue--;
-            Invoke("countDownTimer", 1.0f);
-        }
-        else
-        {
-            timerUI.text = "WIN!";
 
-            TheGameManager.instance.Win();
-            Invoke("reset", resetdelay);
-        }
     }
-    
+   public void OnMouseDown()
 
-    void reset()
+
     {
-        Time.timeScale = 1.0f;
-        TheGameManager.instance.Win();
+        Debug.Log("HIT");
+
+
+        reached = true;
+
+
     }
 }
-
