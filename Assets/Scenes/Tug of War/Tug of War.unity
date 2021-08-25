@@ -747,6 +747,11 @@ PrefabInstance:
       propertyPath: lose
       value: 
       objectReference: {fileID: 513311497}
+    - target: {fileID: 2091302158006048964, guid: 8f4924252e038564696103c712afdbbf,
+        type: 3}
+      propertyPath: resetdelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2091302158006048965, guid: 8f4924252e038564696103c712afdbbf,
         type: 3}
       propertyPath: m_RootOrder
