@@ -26,6 +26,7 @@ public class TimerGameOverLogic : MonoBehaviour
         else
         {
             timerUI.text = "GameOver!";
+
             TheGameManager.instance.Lose();
         }
     }
