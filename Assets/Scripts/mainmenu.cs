@@ -7,14 +7,22 @@ using UnityEngine.SceneManagement;
 
 public class mainmenu : MonoBehaviour
 {
+    //public int playerLifes;
+
     public GameObject SettingsMenu;
     public void StartGame() //This line makes the level start
     {
-        SceneManager.LoadScene("Level1"); // this lookes for the level then puts it into the scene
-
+        LoadRandomScene(); // this lookes for the level then puts it into the scene
+        //PlayerPrefs.GetInt("playerLifes", playerLifes);
     }
 
-   
+    public void LoadRandomScene()
+    {
+        int index = Random.Range(1, 5);
+        SceneManager.LoadScene(index);
+        Debug.Log("Scene Loaded");
+        //PlayerPrefs.SetInt("playerLifes", playerLifes);
+    }
 
     public void TestButton(string buttonName)
     {
