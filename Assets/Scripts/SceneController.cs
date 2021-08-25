@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -60,7 +60,7 @@ public class SceneController : MonoBehaviour {
 
     //-------------------------------------------------------------------------------------------------------------------------------------------
 
-     private MainCard _firstRevealed;
+    private MainCard _firstRevealed;
     private MainCard _secondRevealed;
 
     private int _score = 0;
@@ -73,7 +73,7 @@ public class SceneController : MonoBehaviour {
 
     public void CardRevealed(MainCard card)
     {
-        if (_firstRevealed == null)
+        if(_firstRevealed == null)
         {
             _firstRevealed = card;
         }
@@ -86,27 +86,32 @@ public class SceneController : MonoBehaviour {
 
     private IEnumerator CheckMatch()
     {
-        if (_firstRevealed.id != _secondRevealed.id)
+        if(_firstRevealed.id == _secondRevealed.id)
         {
             _score++;
-            scoreLabel.text = "Mistakes: " + _score;
-        
-       
-        
+            scoreLabel.text = "Score: " + _score;
+        }
+        else
+        {
             yield return new WaitForSeconds(0.5f);
 
             _firstRevealed.Unreveal();
             _secondRevealed.Unreveal();
         }
 
+        if(_score >= 4)
+        {
+              TheGameManager.instance.Win();
+        }
+       
         _firstRevealed = null;
         _secondRevealed = null;
-        TheGameManager.instance.Win();
 
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene("Memory Game");
+        SceneManager.LoadScene("Scene_001");
     }
+
 }
